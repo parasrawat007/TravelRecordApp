@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TravelRecordApp"
              x:Class="TravelRecordApp.HomePage">
-        <StackLayout>
-            <Label Text="Welcome to HomePage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-</ContentPage>
+
+    <local:HistoryPage Title="History"/>
+    <local:ProfilePage Title="Profile"/>
+    <local:ProfilePage Title="Map"/>
+
+</TabbedPage>
