@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TravelRecordApp"
              x:Class="TravelRecordApp.HomePage">
-
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="ToolBarItemAdd" Text="Add" Clicked="ToolBarItemAdd_Clicked"/>
+    </TabbedPage.ToolbarItems>
     <local:HistoryPage Title="History"/>
     <local:ProfilePage Title="Profile"/>
     <local:ProfilePage Title="Map"/>
