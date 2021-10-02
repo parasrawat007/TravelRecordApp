@@ -4,15 +4,10 @@
              xmlns:local="clr-namespace:TravelRecordApp"
              x:Class="TravelRecordApp.MainPage">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="RedColor">#FF5A60</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <StackLayout VerticalOptions="Center" Margin="20">
-        <Entry x:Name="EntryEmail" Margin="10" Placeholder="Email" Keyboard="Email" TextColor="{StaticResource RedColor}"/>
-        <Entry x:Name="EntryPassword" Margin="10" Placeholder="Password" IsPassword="True"  TextColor="{StaticResource RedColor}"/>
-        <Button x:Name="BtnLogin" Margin="0,50,0,0" Text="Login" TextColor="White" Clicked="BtnLogin_Clicked" BackgroundColor="{StaticResource RedColor}}"/>
+        <Entry x:Name="EntryEmail" Margin="10" Placeholder="Email" Keyboard="Email" TextColor="{StaticResource BlueColor}"/>
+        <Entry x:Name="EntryPassword" Margin="10" Placeholder="Password" IsPassword="True"  TextColor="{StaticResource BlueColor}"/>
+        <Button x:Name="BtnLogin" Margin="0,50,0,0" Text="Login" TextColor="White" Clicked="BtnLogin_Clicked" BackgroundColor="{StaticResource BlueColor}}"/>
     </StackLayout>
 
 </ContentPage>
