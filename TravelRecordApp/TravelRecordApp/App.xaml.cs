@@ -7,11 +7,19 @@ namespace TravelRecordApp
 {
     public partial class App : Application
     {
+        public static string DatabaseLocation;
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+        }
+        public App(string DbLocation)
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+            DatabaseLocation = DbLocation;
         }
 
         protected override void OnStart()
