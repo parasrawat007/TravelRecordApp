@@ -21,10 +21,11 @@ namespace TravelRecordApp
 		{
 			base.OnAppearing();
 
-			var con = new SQLiteConnection(App.DatabaseLocation);
-			con.CreateTable<Post>();
-			var posts=con.Table<Post>().ToList();
-			con.Close();
+			using (var con = new SQLiteConnection(App.DatabaseLocation))
+			{
+				con.CreateTable<Post>();
+				var posts = con.Table<Post>().ToList();
+			}
 
 		}
 	}
