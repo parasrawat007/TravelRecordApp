@@ -27,7 +27,19 @@ namespace TravelRecordApp
 				var posts = con.Table<Post>().ToList();
 				ListViewPost.ItemsSource = posts;
 			}
+		}
 
+		private void ListViewPost_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+            var SelectedPost = ListViewPost.SelectedItem as Post;
+            if(SelectedPost!=null)
+            {
+                Navigation.PushAsync(new PostDetailPage(SelectedPost));
+            }
+            else
+            {
+
+            }
 		}
 	}
 }
