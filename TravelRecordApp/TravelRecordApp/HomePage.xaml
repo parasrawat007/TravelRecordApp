@@ -8,6 +8,6 @@
     </TabbedPage.ToolbarItems>
     <local:HistoryPage Title="History"/>
     <local:ProfilePage Title="Profile"/>
-    <local:ProfilePage Title="Map"/>
+    <local:MapPage Title="Map"/>
 
 </TabbedPage>

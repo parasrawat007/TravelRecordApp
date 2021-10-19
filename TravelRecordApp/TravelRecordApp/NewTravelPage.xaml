@@ -5,7 +5,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="ToolbarItemSave" Text="Save" Clicked="ToolbarItemSave_Clicked"/>
     </ContentPage.ToolbarItems>
-        <StackLayout>
+    
+    <StackLayout>
         <Entry x:Name="EntryExperience" Placeholder="Write Your Experience"/>
     </StackLayout>
 </ContentPage>

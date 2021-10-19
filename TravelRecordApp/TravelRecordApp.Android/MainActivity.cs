@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -26,5 +25,6 @@ namespace TravelRecordApp.Droid
             string FullPath = Path.Combine(FolderPath, DbName);
             LoadApplication(new App(FullPath));
         }
+      
     }
 }
