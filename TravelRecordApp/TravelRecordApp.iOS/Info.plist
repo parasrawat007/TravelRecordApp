@@ -36,5 +36,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need accessto your location to improve the app experience</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need accessto your location to improve the app experience</string>
 </dict>
 </plist>
