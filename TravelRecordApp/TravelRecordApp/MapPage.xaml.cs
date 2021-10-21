@@ -1,19 +1,23 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using Plugin.Geolocator.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
-
+using Position = Xamarin.Forms.Maps.Position;
 
 namespace TravelRecordApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MapPage : ContentPage
 	{
-		public MapPage ()
+        IGeolocator locator = CrossGeolocator.Current;
+        public MapPage ()
 		{
 			InitializeComponent ();
 		}
@@ -24,14 +28,35 @@ namespace TravelRecordApp
             GetLocation();
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();  
+            locator.StopListeningAsync();
+        }
         private async void GetLocation()
         {
            var status = await CheckAndRequestPermission();
             if (status == PermissionStatus.Granted)
             {
                 var location = await Geolocation.GetLocationAsync();
-                MapLocation.IsShowingUser = true;    
+              
+                locator.PositionChanged += Locator_PositionChanged;
+                await locator.StartListeningAsync(new TimeSpan(0, 1, 0),100);
+                MapLocation.IsShowingUser = true;
+                CenterMap(location.Latitude, location.Longitude);
             }
+        }
+
+        private void Locator_PositionChanged(object sender, Plugin.Geolocator.Abstractions.PositionEventArgs e)
+        {
+            CenterMap(e.Position.Latitude, e.Position.Longitude);
+        }
+
+        private void CenterMap(double latitude, double longitude)
+        {
+            var position = new Position(latitude, longitude);
+            var mapspan = new MapSpan(position,0.0005,0.0005);
+            MapLocation.MoveToRegion(mapspan);
         }
 
         private async Task<PermissionStatus> CheckAndRequestPermission()
