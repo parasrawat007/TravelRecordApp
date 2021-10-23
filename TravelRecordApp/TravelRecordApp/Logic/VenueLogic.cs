@@ -13,12 +13,12 @@ namespace TravelRecordApp.Logic
         {
             List<Venue> venues = new List<Venue>();
 
-            var url = Venue.GenerateUrl(latitude, longitude);
+            var url = VenueRoot.GenerateUrl(latitude, longitude);
             using (HttpClient client = new HttpClient())
             {
                 var response =await client.GetAsync(url);
                 var json =await response.Content.ReadAsStringAsync();
-            }
+             }
             return venues;
         }
     }
