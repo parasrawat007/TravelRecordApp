@@ -30,20 +30,37 @@ namespace TravelRecordApp
         }
         private void ToolbarItemSave_Clicked(object sender, EventArgs e)
 		{
-			var post = new Post()
-			{
-				Experience = EntryExperience.Text
-			};
+            try
+            {
+                var SelectedVenue = ListViewVenue.SelectedItem as Venue;
+                var FirstCategory = SelectedVenue.Categories.FirstOrDefault();
+                var post = new Post()
+                {
+                    Experience = EntryExperience.Text,
+                    CategoryId = FirstCategory.Id,
+                    CategoryName = FirstCategory.Name,
+                    Address = SelectedVenue.Location.Address,
+                    Distance = SelectedVenue.Location.Distance,
+                    Latitude = SelectedVenue.Location.Lat,
+                    Longitude = SelectedVenue.Location.Lng,
+                    VenueName = SelectedVenue.Name
+                };
+                using (var con = new SQLiteConnection(App.DatabaseLocation))
+                {
+                    con.CreateTable<Post>();
+                    int rows = con.Insert(post);
+                    if (rows > 0)
+                        DisplayAlert("Success", "Experience successfully inserted", "Ok");
+                    else
+                        DisplayAlert("Failure", "Experience Not inserted", "Ok");
+                }
+            }           
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message,"Ok");
+            }
 
-			using (var con = new SQLiteConnection(App.DatabaseLocation))
-			{
-				con.CreateTable<Post>();
-				int rows = con.Insert(post);
-				if (rows > 0)
-					DisplayAlert("Success", "Experience successfully inserted", "Ok");
-				else
-					DisplayAlert("Failure", "Experience Not inserted", "Ok");
-			}
+			
 		}
 	}
 }
