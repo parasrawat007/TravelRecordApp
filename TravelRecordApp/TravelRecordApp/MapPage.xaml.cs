@@ -1,10 +1,12 @@
 ﻿using Plugin.Geolocator;
 using Plugin.Geolocator.Abstractions;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelRecordApp.Model;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -24,8 +26,43 @@ namespace TravelRecordApp
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+            base.OnAppearing();            
             GetLocation();
+            GetPosts();
+            
+        }
+
+        private void GetPosts()
+        {
+            using (var con = new SQLiteConnection(App.DatabaseLocation))
+            {
+                con.CreateTable<Post>();
+                var posts = con.Table<Post>().ToList();
+                DisplayOnMap(posts);
+            }
+        }
+
+        private void DisplayOnMap(List<Post> posts)
+        {
+            foreach (var post in posts)
+            {
+                try
+                {
+                    var position = new Position(post.Latitude, post.Longitude);
+                    var pin = new Pin()
+                    {
+                        Position = position,
+                        Label = post.VenueName,
+                        Address = post.Address,
+                        Type = PinType.SavedPin
+                    };
+                    MapLocation.Pins.Add(pin);
+                }
+                catch (Exception ex)
+                {
+                    DisplayAlert("Error",ex.Message, "Ok");
+                }
+            }
         }
 
         protected override void OnDisappearing()
