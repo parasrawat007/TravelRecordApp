@@ -5,6 +5,7 @@
              x:Class="TravelRecordApp.MainPage">
 
     <StackLayout VerticalOptions="Center" Margin="20">
+        <Image x:Name="ImageIcon" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="150" Margin="0,0,0,50" />
         <Entry x:Name="EntryEmail" Margin="10" Placeholder="Email" Keyboard="Email" TextColor="{StaticResource BlueColor}"/>
         <Entry x:Name="EntryPassword" Margin="10" Placeholder="Password" IsPassword="True"  TextColor="{StaticResource BlueColor}"/>
         <Button x:Name="BtnLogin" Margin="0,50,0,0" Text="Login" Clicked="BtnLogin_Clicked" Style="{StaticResource NormalButton}"/>
