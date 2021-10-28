@@ -4,10 +4,10 @@
              xmlns:local="clr-namespace:TravelRecordApp"
              x:Class="TravelRecordApp.HomePage">
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Name="ToolBarItemAdd" Text="Add" Clicked="ToolBarItemAdd_Clicked"/>
+        <ToolbarItem Name="ToolBarItemAdd" Text="Add" Clicked="ToolBarItemAdd_Clicked" Icon="add.png"/>
     </TabbedPage.ToolbarItems>
-    <local:HistoryPage Title="History"/>
-    <local:ProfilePage Title="Profile"/>
-    <local:MapPage Title="Map"/>
+    <local:HistoryPage Title="History" Icon="Home.png"/>
+    <local:ProfilePage Title="Profile" Icon="User.png"/>
+    <local:MapPage Title="Map" Icon="Map.png"/>    
 
 </TabbedPage>

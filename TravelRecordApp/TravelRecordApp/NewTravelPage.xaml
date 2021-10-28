@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelRecordApp.NewTravelPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="ToolbarItemSave" Text="Save" Clicked="ToolbarItemSave_Clicked"/>
+        <ToolbarItem x:Name="ToolbarItemSave" Text="Save" Clicked="ToolbarItemSave_Clicked" Icon="Save.png"/>
     </ContentPage.ToolbarItems>
     
     <StackLayout>

@@ -118,94 +118,94 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_Home.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_Map.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Map.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_Save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Save.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_User.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_Add.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_History.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\History.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_Home.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_Map.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Map.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_Save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Save.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_User.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_Add.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_History.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\History.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_Map.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Map.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_Save.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Save.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_User.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_Add.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_History.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\History.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_Home.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_Map.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Map.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_Save.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Save.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_User.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_Add.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_History.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\History.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_Home.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_Save.png" />
+    <AndroidResource Include="Resources\drawable\Save.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_User.png" />
+    <AndroidResource Include="Resources\drawable\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_Add.png" />
+    <AndroidResource Include="Resources\drawable\Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_History.png" />
+    <AndroidResource Include="Resources\drawable\History.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_Home.png" />
+    <AndroidResource Include="Resources\drawable\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_Map.png" />
+    <AndroidResource Include="Resources\drawable\Map.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
