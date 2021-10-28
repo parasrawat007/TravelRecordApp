@@ -172,4 +172,58 @@
       <Name>TravelRecordApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Add%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Save%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Save%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\User%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\User%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\History%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\History%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Add%402x.png" />
+  </ItemGroup>
 </Project>
