@@ -31,7 +31,7 @@ namespace TravelRecordApp
                     var count = PostTable.Where(p => p.CategoryName == Category).Count();
                     CategoriesCount.Add(Category, count);
                 }
-
+                ListViewCategoris.ItemsSource = CategoriesCount;
 
                 LabelPostCount.Text = PostTable.Count.ToString();
             }
