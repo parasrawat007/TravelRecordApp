@@ -24,6 +24,15 @@ namespace TravelRecordApp
             {
                 var PostTable = con.Table<Post>().ToList();
                 var Categories = PostTable.OrderBy(p => p.Id).Select(p => p.CategoryName).Distinct().ToList();
+
+                Dictionary<string, int> CategoriesCount = new Dictionary<string, int>();
+                foreach (var Category in Categories)
+                {
+                    var count = PostTable.Where(p => p.CategoryName == Category).Count();
+                    CategoriesCount.Add(Category, count);
+                }
+
+
                 LabelPostCount.Text = PostTable.Count.ToString();
             }
         }
