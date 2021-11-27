@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelRecordApp.Helpers;
 using Xamarin.Forms;
 
 namespace TravelRecordApp
@@ -26,7 +27,10 @@ namespace TravelRecordApp
             }
             else
             {
-                Navigation.PushAsync(new HomePage());
+                if (Auth.LoginUser(EntryEmail.Text,EntryPassword.Text))
+                {
+                    Navigation.PushAsync(new HomePage());
+                }
             }
         }
     }
