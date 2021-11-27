@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace TravelRecordApp.Helpers
 {
     public interface IAuth
     {
-        bool RegisterUser(string Email, string Password);
-        bool LoginUser(string Email, string Password);
-        bool IsAuthenticated(string Email, string Password);
-        string GetCurrentUserId(string Email, string Password); 
+        Task<bool> RegisterUser(string Email, string Password);
+        Task<bool> LoginUser(string Email, string Password);
+        bool IsAuthenticated();
+        string GetCurrentUserId(); 
     }
     public class Auth
     {
@@ -19,21 +20,43 @@ namespace TravelRecordApp.Helpers
         {
 
         }
-        public static bool RegisterUser(string Email, string Password)
+        public async static Task<bool> RegisterUser(string Email, string Password)
         {
-            return auth.RegisterUser(Email,Password);
+            try
+            {
+                return await auth.RegisterUser(Email, Password);
+            }
+            catch(Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                "The password must be 6 characters long"
+                return false;
+            }
         }
-        public static bool LoginUser(string Email, string Password)
+        public async static Task<bool> LoginUser(string Email, string Password)
         {
-            return auth.LoginUser(Email, Password);
+            try
+            {
+                return await auth.LoginUser(Email, Password);
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                var registerMessage = "There is no user record corresponding to this identifier.";
+                if (ex.Message.Contains(registerMessage))
+                {
+                    return await RegisterUser(Email, Password);
+                }
+                return false;
+            }
         }
-        public static bool IsAuthenticated(string Email, string Password)
+        public static bool IsAuthenticated()
         {
-            return auth.IsAuthenticated(Email, Password);
+            return auth.IsAuthenticated();
         }
-        public static string GetCurrentUserId(string Email, string Password)
+        public static string GetCurrentUserId()
         {
-            return auth.GetCurrentUserId(Email, Password);
+            return auth.GetCurrentUserId();
         }
     }
 }
