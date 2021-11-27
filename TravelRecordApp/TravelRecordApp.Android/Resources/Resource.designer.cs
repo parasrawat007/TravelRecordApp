@@ -13318,6 +13318,12 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7f0a0057
 			public const int fab_transformation_sheet_behavior = 2131361879;
 			
+			// aapt resource value: 0x7f0a0060
+			public const int gcm_defaultSenderId = 2131361888;
+			
+			// aapt resource value: 0x7f0a0061
+			public const int google_storage_bucket = 2131361889;
+			
 			// aapt resource value: 0x7f0a0058
 			public const int hide_bottom_view_on_scroll_behavior = 2131361880;
 			
@@ -13410,6 +13416,9 @@ namespace TravelRecordApp.Droid
 			
 			// aapt resource value: 0x7f0a005e
 			public const int path_password_strike_through = 2131361886;
+			
+			// aapt resource value: 0x7f0a0062
+			public const int project_id = 2131361890;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int search_menu_title = 2131361861;
