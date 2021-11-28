@@ -28,8 +28,7 @@ namespace TravelRecordApp.Helpers
             }
             catch(Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
-                "The password must be 6 characters long"
+                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");                
                 return false;
             }
         }
@@ -42,7 +41,7 @@ namespace TravelRecordApp.Helpers
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
-                var registerMessage = "There is no user record corresponding to this identifier.";
+                var registerMessage = "There is no user record corresponding to this identifier";
                 if (ex.Message.Contains(registerMessage))
                 {
                     return await RegisterUser(Email, Password);

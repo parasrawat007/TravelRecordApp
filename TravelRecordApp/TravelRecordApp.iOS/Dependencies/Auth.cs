@@ -32,7 +32,9 @@ namespace TravelRecordApp.iOS.Dependencies
             }
             catch (NSErrorException ex)
             {
-                throw new Exception(ex.Message);
+                string Message = ex.Message.Substring(ex.Message.IndexOf("NsLocalizedDescription=", StringComparison.CurrentCulture));
+                Message= Message.Replace("NsLocalizedDescription=","").Split('.')[0]; 
+                throw new Exception(Message);
             }
             catch (Exception ex)
             {
@@ -49,7 +51,9 @@ namespace TravelRecordApp.iOS.Dependencies
             }
             catch (NSErrorException ex)
             {
-                throw new Exception(ex.Message);
+                string Message = ex.Message.Substring(ex.Message.IndexOf("NsLocalizedDescription=", StringComparison.CurrentCulture));
+                Message = Message.Replace("NsLocalizedDescription=", "").Split('.')[0];
+                throw new Exception(Message);
             }
             catch (Exception ex)
             {
