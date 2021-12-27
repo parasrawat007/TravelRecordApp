@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Firebase;
 
 namespace TravelRecordApp.Droid
 {
@@ -21,6 +22,7 @@ namespace TravelRecordApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this,savedInstanceState);
+            //FirebaseApp.InitializeApp(this);
             string DbName = "Travel_Db.sqlite";
             string FolderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string FullPath = Path.Combine(FolderPath, DbName);

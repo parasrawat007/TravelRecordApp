@@ -13312,6 +13312,9 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7f0a0011
 			public const int common_signin_button_text_long = 2131361809;
 			
+			// aapt resource value: 0x7f0a0062
+			public const int default_web_client_id = 2131361890;
+			
 			// aapt resource value: 0x7f0a0056
 			public const int fab_transformation_scrim_behavior = 2131361878;
 			
@@ -13321,8 +13324,17 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7f0a0060
 			public const int gcm_defaultSenderId = 2131361888;
 			
+			// aapt resource value: 0x7f0a0063
+			public const int google_api_key = 2131361891;
+			
 			// aapt resource value: 0x7f0a0061
-			public const int google_storage_bucket = 2131361889;
+			public const int google_app_id = 2131361889;
+			
+			// aapt resource value: 0x7f0a0064
+			public const int google_crash_reporting_api_key = 2131361892;
+			
+			// aapt resource value: 0x7f0a0065
+			public const int google_storage_bucket = 2131361893;
 			
 			// aapt resource value: 0x7f0a0058
 			public const int hide_bottom_view_on_scroll_behavior = 2131361880;
@@ -13417,8 +13429,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7f0a005e
 			public const int path_password_strike_through = 2131361886;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int project_id = 2131361890;
+			// aapt resource value: 0x7f0a0066
+			public const int project_id = 2131361894;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int search_menu_title = 2131361861;

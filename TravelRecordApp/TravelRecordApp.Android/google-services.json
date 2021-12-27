@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:561940166939:android:b92f55dd220c20eceebbbe",
+        "mobilesdk_app_id": "1:561940166939:android:dc6b8b0febda6bf5eebbbe",
         "android_client_info": {
-          "package_name": "TravelRecordApp.Android"
+          "package_name": "com.companyname.TravelRecordApp"
         }
       },
       "oauth_client": [
@@ -20,7 +20,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDNiFY7osG0mRtOkg_1Aja3QGPf90namd4"
+          "current_key": "AIzaSyAtija8TErOHk2iNuDzhhMVs4QLshlwiI0"
         }
       ],
       "services": {
