@@ -91,6 +91,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Dependencies\Auth.cs" />
+    <Compile Include="Dependencies\Firestore.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -164,6 +165,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.iOS.Auth">
       <Version>6.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.CloudFirestore">
+      <Version>1.4.2.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
     <PackageReference Include="Xamarin.Forms.Maps">

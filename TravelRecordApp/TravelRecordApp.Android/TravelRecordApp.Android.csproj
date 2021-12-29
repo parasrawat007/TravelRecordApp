@@ -75,6 +75,9 @@
     <PackageReference Include="Xamarin.Firebase.Auth">
       <Version>71.1605.4</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Firestore">
+      <Version>71.1705.4</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
@@ -87,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dependencies\Auth.cs" />
+    <Compile Include="Dependencies\Firestore.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
