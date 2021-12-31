@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelRecordApp.Helpers;
 using TravelRecordApp.Logic;
 using TravelRecordApp.Model;
 using Xamarin.Forms;
@@ -45,14 +46,30 @@ namespace TravelRecordApp
                     Longitude = SelectedVenue.Location.Lng,
                     VenueName = SelectedVenue.Name
                 };
-                using (var con = new SQLiteConnection(App.DatabaseLocation))
+                //using (var con = new SQLiteConnection(App.DatabaseLocation))
+                //{
+                //    con.CreateTable<Post>();
+                //    int rows = con.Insert(post);
+                //    if (rows > 0)
+                //    {
+                //        EntryExperience.Text = String.Empty;
+                //        DisplayAlert("Success", "Experience successfully inserted", "Ok");
+                //    }
+                //    else
+                //    {
+                //        DisplayAlert("Failure", "Experience Not inserted", "Ok");
+                //    }
+                //}
+
+                bool result = Firestore.Insert(post);
+                if (result)
                 {
-                    con.CreateTable<Post>();
-                    int rows = con.Insert(post);
-                    if (rows > 0)
-                        DisplayAlert("Success", "Experience successfully inserted", "Ok");
-                    else
-                        DisplayAlert("Failure", "Experience Not inserted", "Ok");
+                    EntryExperience.Text = String.Empty;
+                    DisplayAlert("Success", "Experience successfully inserted", "Ok");
+                }
+                else
+                {
+                    DisplayAlert("Failure", "Experience Not inserted", "Ok");
                 }
             }           
             catch (Exception ex)

@@ -14,7 +14,7 @@ namespace TravelRecordApp.Helpers
         Task<bool> Update(Post post);
         Task<List<Post>> Read();
     }
-    class Firestore
+    public class Firestore
     {
         public static IFirestore firestore = DependencyService.Get<IFirestore>();
         public static async Task<bool> Delete(Post post)

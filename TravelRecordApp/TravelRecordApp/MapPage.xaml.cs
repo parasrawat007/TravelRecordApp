@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelRecordApp.Helpers;
 using TravelRecordApp.Model;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -32,14 +33,16 @@ namespace TravelRecordApp
             
         }
 
-        private void GetPosts()
+        private async void GetPosts()
         {
-            using (var con = new SQLiteConnection(App.DatabaseLocation))
-            {
-                con.CreateTable<Post>();
-                var posts = con.Table<Post>().ToList();
-                DisplayOnMap(posts);
-            }
+            //using (var con = new SQLiteConnection(App.DatabaseLocation))
+            //{
+            //    con.CreateTable<Post>();
+            //    var posts = con.Table<Post>().ToList();
+            //    DisplayOnMap(posts);
+            //}
+            var posts =await Firestore.Read();
+            DisplayOnMap(posts);
         }
 
         private void DisplayOnMap(List<Post> posts)
