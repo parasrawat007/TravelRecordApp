@@ -15,7 +15,8 @@
                IsPassword="True"/>
         <Button x:Name="LoginButton" 
                 Text="Login" 
-                Clicked="LoginButton_Clicked"/>
+                Clicked="LoginButton_Clicked"
+                Style="{StaticResource normalButton}"/>
     </StackLayout>
 
 </ContentPage>
