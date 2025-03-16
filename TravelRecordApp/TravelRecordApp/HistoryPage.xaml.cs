@@ -24,7 +24,8 @@ namespace TravelRecordApp
 			{
 				connection.CreateTable<Post>();
 				var posts = connection.Table<Post>().ToList();
-			}
+				postListView.ItemsSource = posts;
+            }
 		}
 	}
 }
