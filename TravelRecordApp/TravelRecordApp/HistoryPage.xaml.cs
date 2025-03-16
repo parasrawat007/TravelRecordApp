@@ -17,13 +17,14 @@ namespace TravelRecordApp
 		{
 			InitializeComponent ();
 		}
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-			SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation);
-            connection.CreateTable<Post>();
-            var posts = connection.Table<Post>().ToList();
-            connection.Close();
-        }
-    }
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+			using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
+			{
+				connection.CreateTable<Post>();
+				var posts = connection.Table<Post>().ToList();
+			}
+		}
+	}
 }
