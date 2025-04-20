@@ -23,7 +23,8 @@ namespace TravelRecordApp
 			using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
 			{
 				var postTable = conn.Table<Post>().ToList();
-				postCountLabel.Text = postTable.Count.ToString();	
+				var categories =postTable.OrderBy(x=>x.CategoryId).Select(x=>x.CategoryName).Distinct().ToList();
+                postCountLabel.Text = postTable.Count.ToString();	
             }
         }
     }
