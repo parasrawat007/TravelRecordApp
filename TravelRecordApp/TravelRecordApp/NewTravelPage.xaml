@@ -8,6 +8,30 @@
     <ContentPage.Content>        
         <StackLayout>
             <Entry x:Name="experienceEntry" Placeholder="Experience" Margin="15"/>
+            <ListView x:Name="VenueListView"
+                      Margin="20,0"
+                      HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding name}" 
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding location.address}" Grid.Row="1" TextColor="DodgerBlue"/>
+                                <Label Text="{Binding location.distance, StringFormat='{0} meters'}" Grid.Column="1"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
