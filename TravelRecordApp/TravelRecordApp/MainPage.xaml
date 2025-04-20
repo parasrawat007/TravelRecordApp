@@ -5,6 +5,11 @@
 
     <StackLayout VerticalOptions="Center" 
                  Margin="15">
+        <Image x:Name="iconImage"
+               HorizontalOptions="FillAndExpand"
+               Aspect="AspectFit"
+               Margin="0,0,0,50"
+               HeightRequest="150"/>
         <Entry x:Name="emailEntry"
                Placeholder="User name"
                TextColor="{StaticResource blueColor}"
