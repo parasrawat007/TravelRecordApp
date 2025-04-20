@@ -139,4 +139,21 @@
       <Name>TravelRecordApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add%402x.png" />
+    <Content Include="Resources\add%403x.png" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\home%402x.png" />
+    <Content Include="Resources\home%403x.png" />
+    <Content Include="Resources\home.png" />
+    <Content Include="Resources\map%402x.png" />
+    <Content Include="Resources\map%403x.png" />
+    <Content Include="Resources\map.png" />
+    <Content Include="Resources\save%402x.png" />
+    <Content Include="Resources\save%403x.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\user%402x.png" />
+    <Content Include="Resources\user%403x.png" />
+    <Content Include="Resources\user.png" />
+  </ItemGroup>
 </Project>
