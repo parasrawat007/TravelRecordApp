@@ -12,20 +12,11 @@
             <Label Text="posts"
                    HorizontalOptions="Center"
                    TextColor="LightGray"/>
-            <ListView>
+            <ListView x:Name="categoryListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding experience}" 
-                                   FontSize="Medium" 
-                                   TextColor="Black"/>
-                            <Label Text="{Binding date}" 
-                                   FontSize="Small" 
-                                   TextColor="LightGray"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
+                        <TextCell TextColor="Black" Text="{Binding Path=Key}" Detail="{Binding Path=Value}"/>
+                    </DataTemplate>
             </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
