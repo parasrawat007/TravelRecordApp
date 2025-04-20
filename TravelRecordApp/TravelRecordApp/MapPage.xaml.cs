@@ -29,18 +29,18 @@ namespace TravelRecordApp
 			GetLocation();
 			GetPosts();
 		}
-        protected void GetPosts()
-        {
-            using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
-            {
-                connection.CreateTable<Post>();
-                var posts = connection.Table<Post>().ToList();
-                DisplayOnMap(posts);
-            }
-        }
+		protected void GetPosts()
+		{
+			using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
+			{
+				connection.CreateTable<Post>();
+				var posts = connection.Table<Post>().ToList();
+				DisplayOnMap(posts);
+			}
+		}
 
-        private void DisplayOnMap(List<Post> posts)
-        {
+		private void DisplayOnMap(List<Post> posts)
+		{
 			foreach (var post in posts)
 			{
 				try
@@ -61,9 +61,9 @@ namespace TravelRecordApp
 
 				}
 			}
-         }
+		 }
 
-        protected override void OnDisappearing()
+		protected override void OnDisappearing()
 		{
 			base.OnDisappearing();
 			locator.StopListeningAsync();
@@ -92,8 +92,8 @@ namespace TravelRecordApp
 		private void CenterMap(double latitude, double longitude)
 		{
 			var center = new Position(latitude, longitude);
-			MapSpan span = new MapSpan(center, 1, 1);
-			locationsMap.MoveToRegion(span);
+			MapSpan span = MapSpan.FromCenterAndRadius(center, Distance.FromMeters(500));
+            locationsMap.MoveToRegion(span);
 		}
 
 		private async Task<PermissionStatus> CheckAndRequestLocationPermission()

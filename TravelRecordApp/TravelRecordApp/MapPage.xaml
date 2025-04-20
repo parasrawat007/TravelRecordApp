@@ -8,6 +8,7 @@
                  HorizontalOptions="FillAndExpand" 
                  IsShowingUser="False"
                  VerticalOptions="FillAndExpand"
-                 MapType="Hybrid"/>
+                 MapType="Hybrid"
+                 />
     </ContentPage.Content>
 </ContentPage>

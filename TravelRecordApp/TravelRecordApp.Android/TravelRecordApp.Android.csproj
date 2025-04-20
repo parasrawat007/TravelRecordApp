@@ -95,9 +95,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TravelRecordApp\TravelRecordApp.csproj">
       <Project>{79384018-1D9C-4029-96A6-78C47B9DBB62}</Project>
@@ -105,31 +103,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\mipmap-hdpi\ic_action_add.png" />
-    <Content Include="Resources\mipmap-hdpi\ic_action_home.png" />
-    <Content Include="Resources\mipmap-hdpi\ic_action_map.png" />
-    <Content Include="Resources\mipmap-hdpi\ic_action_person.png" />
-    <Content Include="Resources\mipmap-hdpi\ic_action_save.png" />
-    <Content Include="Resources\mipmap-mdpi\ic_action_add.png" />
-    <Content Include="Resources\mipmap-mdpi\ic_action_home.png" />
-    <Content Include="Resources\mipmap-mdpi\ic_action_map.png" />
-    <Content Include="Resources\mipmap-mdpi\ic_action_person.png" />
-    <Content Include="Resources\mipmap-mdpi\ic_action_save.png" />
-    <Content Include="Resources\mipmap-xhdpi\ic_action_add.png" />
-    <Content Include="Resources\mipmap-xhdpi\ic_action_home.png" />
-    <Content Include="Resources\mipmap-xhdpi\ic_action_map.png" />
-    <Content Include="Resources\mipmap-xhdpi\ic_action_person.png" />
-    <Content Include="Resources\mipmap-xhdpi\ic_action_save.png" />
-    <Content Include="Resources\mipmap-xxhdpi\ic_action_add.png" />
-    <Content Include="Resources\mipmap-xxhdpi\ic_action_home.png" />
-    <Content Include="Resources\mipmap-xxhdpi\ic_action_map.png" />
-    <Content Include="Resources\mipmap-xxhdpi\ic_action_person.png" />
-    <Content Include="Resources\mipmap-xxhdpi\ic_action_save.png" />
-    <Content Include="Resources\mipmap-xxxhdpi\ic_action_add.png" />
-    <Content Include="Resources\mipmap-xxxhdpi\ic_action_home.png" />
-    <Content Include="Resources\mipmap-xxxhdpi\ic_action_map.png" />
-    <Content Include="Resources\mipmap-xxxhdpi\ic_action_person.png" />
-    <Content Include="Resources\mipmap-xxxhdpi\ic_action_save.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\map.png" />
+    <AndroidResource Include="Resources\drawable\save.png" />
+    <AndroidResource Include="Resources\drawable\user.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\add.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\home.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\map.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\user.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\save.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\add.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\home.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\map.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\user.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\save.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\add.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\home.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\map.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\user.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\save.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\add.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\home.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\map.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\user.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\save.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\add.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\home.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\map.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\person.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
