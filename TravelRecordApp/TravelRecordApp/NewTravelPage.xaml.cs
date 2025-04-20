@@ -27,29 +27,47 @@ namespace TravelRecordApp
 			var position =await location.GetPositionAsync();
 
 			var venues = await VenueLogic.GetVenues(position.Latitude, position.Longitude);
-		    VenueListView.ItemsSource = venues;
+			VenueListView.ItemsSource = venues;
 		}
 
 		private void Save_Clicked(object sender, EventArgs e)
 		{
-			Post post = new Post()
+			try
 			{
-				Experience = experienceEntry.Text
-			};
-			using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+                var selectedVenue = VenueListView.SelectedItem as Venue;
+                var firstCategories = selectedVenue.categories.FirstOrDefault();
+                Post post = new Post()
+                {
+                    Address = selectedVenue.location.address,
+                    CategoryId = firstCategories.id,
+                    CategoryName = firstCategories.name,
+                    Distance = selectedVenue.location.distance,
+                    Latitude = selectedVenue.location.lat,
+                    Logitude = selectedVenue.location.lng,
+                    VenueName = firstCategories.name,
+                    Experience = experienceEntry.Text
+                };
+                using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+                {
+                    conn.CreateTable<Post>();
+                    int rows = conn.Insert(post);
+                    conn.Close();
+                    if (rows > 0)
+                    {
+                        DisplayAlert("Success", "Experience successfully inserted", "Ok");
+                    }
+                    else
+                    {
+                        DisplayAlert("Failure", "Experience failed to be inserted", "Ok");
+                    }
+                }
+            }
+			catch (Exception ex)
 			{
-				conn.CreateTable<Post>();
-				int rows = conn.Insert(post);
-				conn.Close();
-				if (rows > 0)
-				{
-					DisplayAlert("Success", "Experience successfully inserted", "Ok");
-				}
-				else
-				{
-					DisplayAlert("Failure", "Experience failed to be inserted", "Ok");
-				}
+
+				
 			}
+			
 		}
 	}
 }
