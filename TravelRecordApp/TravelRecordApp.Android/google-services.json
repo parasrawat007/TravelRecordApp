@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185725073388",
+    "project_id": "travelrecordapp-a7da7",
+    "storage_bucket": "travelrecordapp-a7da7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185725073388:android:28572a026b56292382b2c9",
+        "android_client_info": {
+          "package_name": "com.companyname.travelrecordapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDORsm2kzuuK7_U4d6J91J7QNUxRHCzM80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
