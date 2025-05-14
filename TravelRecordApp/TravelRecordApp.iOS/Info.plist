@@ -40,5 +40,7 @@
 	<string>We need access to ypu location so that we can display nearby venues.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need access to ypu location so that we can display nearby venues.</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 </dict>
 </plist>
