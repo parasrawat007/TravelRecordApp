@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Foundation;
 using TravelRecordApp.Helpers;
 using UIKit;
@@ -16,24 +16,52 @@ namespace TravelRecordApp.iOS.Dependencies
         public Auth()
         {
         }
-        public string GetCurrentUserId(string email, string password)
+        public string GetCurrentUserId()
         {
-            throw new NotImplementedException();
+            return Firebase.Auth.Auth.DefaultInstance.CurrentUser.Uid;
         }
 
-        public bool IsAuthenticated(string email, string password)
+        public bool IsAuthenticated()
         {
-            throw new NotImplementedException();
+            return Firebase.Auth.Auth.DefaultInstance.CurrentUser!=null;
         }
 
-        public bool LoginUser(string email, string password)
+        public async Task<bool> LoginUser(string email, string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                await Firebase.Auth.Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
+            }
+            catch (NSErrorException error)
+            {
+
+                throw new Exception(error.Message);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("There was an Unknown error");
+            }
+            return true;
         }
 
-        public bool RegisterUser(string email, string password)
+        public async Task<bool> RegisterUser(string email, string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                await Firebase.Auth.Auth.DefaultInstance.Regis(email, password);
+            }
+            catch (NSErrorException error)
+            {
+
+                throw new Exception(error.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("There was an Unknown error");
+            }
+            return true;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TravelRecordApp
             iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assests.Images.plane.png", assembly);
         }
 
-        private void LoginButton_Clicked(object sender, EventArgs e)
+        private async Task LoginButton_Clicked(object sender, EventArgs e)
         {
             bool isEmailEmpty = string.IsNullOrEmpty(emailEntry.Text);  
             bool isPasswordEmpty = string.IsNullOrEmpty(passwordEntry.Text);
@@ -28,8 +28,8 @@ namespace TravelRecordApp
             }
             else
             {
-                Auth.LoginUser(emailEntry.Text, passwordEntry.Text);
-                Navigation.PushAsync(new HomePage());
+                bool result =await Auth.LoginUser(emailEntry.Text, passwordEntry.Text);
+                await Navigation.PushAsync(new HomePage());
             }
         }
     }
